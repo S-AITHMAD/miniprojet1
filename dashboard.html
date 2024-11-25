@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Styles pour fixer le footer en bas de la page */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            flex: 1;
+        }
+
+        footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Gestion des Concours</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contests.html">Gestion des Concours</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inscription.html">Inscription</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="dashboard.html">Tableau de Bord</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gestion-resultats.html">Gestion des Résultats</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Tableau de Bord</h2>
+        <p class="text-center">Consultez vos résultats ici.</p>
+
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Identifiant</th>
+                    <th>Concours</th>
+                    <th>Score</th>
+                    <th>Classement</th>
+                </tr>
+            </thead>
+            <tbody id="resultatsParticipant">
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="bg-primary text-white text-center py-3">
+        <p>&copy; 2024 Gestion des Concours. Tous droits réservés.</p>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

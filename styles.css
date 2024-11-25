@@ -1,0 +1,72 @@
+/* Navbar Styling */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem 1.5rem;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #ffc107 !important; /* Gold color on hover */
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    color: #ffffff !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important; /* Gold color on hover */
+    text-decoration: underline;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: #ffd700 !important; /* Bright gold for active links */
+}
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.card-text {
+    color: #6c757d;
+}
+/* Center the form on the page */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Style the form labels */
+.form-label {
+    font-weight: bold;
+}
+
+/* Add hover effect to the submit button */
+.btn-success {
+    transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #28a745; /* Darker green on hover */
+}

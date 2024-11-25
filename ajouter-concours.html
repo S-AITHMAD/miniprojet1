@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un Concours</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
+    </script>
+<!-- Header Section -->
+<header class="bg-light py-5 text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold text-primary">Bienvenue sur le Système de Gestion des Concours</h1>
+        <p class="lead text-muted">
+            vous pouvez ajouter des concours ici
+        </p>
+        <a href="contests.html" class="btn btn-primary btn-lg me-2">Explorer les Concours</a>
+    </div>
+</header>
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Ajouter un Nouveau Concours</h2>
+        <form id="formAjouterConcours">
+            <div class="mb-3">
+                <label for="titre" class="form-label">Titre du concours</label>
+                <input type="text" class="form-control" id="titre" placeholder="Nom du concours" required>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" placeholder="Brève présentation du concours" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="dateDebut" class="form-label">Date de début</label>
+                <input type="date" class="form-control" id="dateDebut" required>
+            </div>
+            <div class="mb-3">
+                <label for="dateFin" class="form-label">Date de fin</label>
+                <input type="date" class="form-control" id="dateFin" required>
+            </div>
+            <div class="mb-3">
+                <label for="categorie" class="form-label">Catégorie</label>
+                <select class="form-select" id="categorie" required>
+                    <option value="">Choisir une catégorie...</option>
+                    <option value="artistique">Artistique</option>
+                    <option value="technologique">Technologique</option>
+                    <option value="sportif">Sportif</option>
+                    <option value="académique">Académique</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Créer le concours</button>
+        </form>
+    </div>
+
+    <footer class="bg-primary text-white text-center py-3">
+        <p>&copy; 2024 Gestion des Concours. Tous droits réservés.</p>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="gestion-concours.js"></script>
+</body>
+</html>

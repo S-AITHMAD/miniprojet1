@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription aux Concours</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Gestion des Concours</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="contests.html">Gestion des Concours</a></li>
+                <li class="nav-item"><a class="nav-link" href="inscription.html">Inscription</a></li>
+                <li class="nav-item"><a class="nav-link" href="dashboard.html">Tableau de Bord</a></li>
+                <li class="nav-item"><a class="nav-link" href="gestion-resultats.html">Gestion des Résultats</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Inscription aux Concours</h2>
+        <form id="formInscription" class="mb-4">
+            <div class="mb-3">
+                <label for="nom" class="form-label">Nom complet</label>
+                <input type="text" class="form-control" id="nom" placeholder="Entrez votre nom complet" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Entrez votre email" required>
+            </div>
+            <div class="mb-3">
+                <label for="age" class="form-label">Âge</label>
+                <input type="number" class="form-control" id="age" placeholder="Entrez votre âge" required>
+            </div>
+            <div class="mb-3">
+                <label for="competences" class="form-label">Compétences (optionnel)</label>
+                <textarea class="form-control" id="competences" placeholder="Décrivez vos compétences" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="concours" class="form-label">Sélectionnez un concours</label>
+                <select class="form-select" id="concours" required>
+                    <option value="">Choisir un concours...</option>
+                    <option value="Art Contest">Concours Artistique</option>
+                    <option value="Tech Challenge">Défi Technologique</option>
+                    <option value="Sports Fest">Fête Sportive</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">S'inscrire</button>
+        </form>
+
+        <h3 class="text-center mb-3">Vos Inscriptions</h3>
+        <div id="listeInscriptions">
+        </div>
+    </div>
+    <footer class="bg-primary text-white text-center py-3">
+        <p>&copy; 2024 Gestion des Concours. Tous droits réservés.</p>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/inscription.js"></script>
+</body>
+</html>
